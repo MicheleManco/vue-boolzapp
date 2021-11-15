@@ -1,0 +1,102 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#green-bg {
+    background-color: green;
+    height: 15vh;
+}
+
+#light-green-bg {
+    background-color: rgb(205, 255, 205);
+    height: 85vh;
+}
+
+#container {
+    margin: 0 auto;
+    position: relative;
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 120px;
+    right: 120px;
+    /* debug */
+    background-color: rgb(28, 0, 128);
+}
+
+#main {
+    float: right;
+    height: 100%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* debug */
+    background-color: hotpink;
+}
+
+#aside {
+    float:left;
+    height: 100%;
+    width: 35%;
+    /* debug */
+    background-color: rgb(202, 21, 202);
+}
+
+#main header {
+    height: 10%;
+    width: 100%;
+    background-color: rgb(182, 182, 182);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#oggetto-persona-attiva {
+display: flex;
+}
+
+#icone-top-dx {
+    display: flex;
+    justify-content: space-around;
+}
+
+#main #chat {
+height: 80%;
+width: 100%;
+background-color: greenyellow;
+}
+
+#main #inputs-mex {
+height: 10%;
+width: 100%;
+background-color: rgb(182, 182, 182);
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+.container-mex-send {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mex-send {
+    width: 35%;
+    margin:10px 30px;
+    padding: 5px;
+    border-radius: 10px;
+    /* debug */
+    background-color: rgb(47, 255, 127);
+}
+
+.mex-arrived {
+    width: 35%;
+    margin:10px 30px;
+    padding: 5px;
+    border-radius: 10px;
+    /* debug */
+    background-color: rgb(255, 255, 255);
+}
