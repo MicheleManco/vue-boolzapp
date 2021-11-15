@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Boolzzapp</title>
 </head>
@@ -15,34 +16,69 @@
             <main id="main">
                 <header>
                     <div id="oggetto-persona-attiva">
-                        <img src="" alt="">
+                        <img src="img/avatar_1.jpg" alt="">
                         <div>
                             <div>nome</div>
                             <div>ultimo accesso</div>
                         </div>
                     </div>
                     <div id="icone-top-dx">
-                        <div>icona1</div>
-                        <div>icona2</div>
-                        <div>icona3</div>
+                        <div><i class="fas fa-search"></i></div>
+                        <div><i class="fas fa-paperclip"></i></div>
+                        <div><i class="fas fa-ellipsis-v"></i></div>
                     </div>
 
 
                 </header>
                 <div id="chat">
                     <!-- messaggi di debug -->
-                    <div class="container-mex-send"><div class="mex-send"> ciao come stai</div></div>
-                    <div class="mex-arrived"> bene</div>
-                    <div class="container-mex-send"><div class="mex-send">ottimo direi</div></div>
-                    <div class="mex-arrived"> già... una favola</div>
+                    <div class="container-mex"><div class="sent"> ciao come stai</div></div>
+                    <div class="container-mex"><div class="received"> ciao come stai</div></div>
+                    <div class="container-mex"><div class="sent"> ciao come stai</div></div>
+                    <div class="container-mex"><div class="received"> ciao come stai</div></div>
                 </div>
+                
                 <div id="inputs-mex">
-                    <div>icona1</div>
-                    <input type="text">
-                    <div>icona2</div>
+                    <div><i class="far fa-smile"></i></div>
+                    <input type="text" >
+                    <div><i class="fas fa-microphone-alt"></i></div>
                 </div>
             </main>
-            <aside id="aside"></aside>
+            <aside>
+                <div id="header-aside">
+                    <div id="profilo-utente">
+                        <img src="img/avatar_io.jpg" alt="">
+                        <div>Mio nome</div>
+                    </div>  
+                    <div id="icone-top-dx">
+                        <div>icona1</div>
+                        <div>icona2</div>
+                        <div>icona3</div>
+                    </div>
+                </div>
+
+                <section id="search">
+                    <div id="back-color">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div> 
+                </section>
+
+                <ul>
+                    <li v-for="contact in contacts">
+                        <div class="contatti">
+                            <div class="spaziatura-contatti">
+                                <div><img :src="contact.avatar" alt=""></div> 
+                                <div>
+                                    <div>{{contact.name}}</div>
+                                    <div>lultimo messaggio</div>
+                                </div>  
+                            </div>
+                            <div>l'ultimo accesso</div>                                             
+                        </div>
+                    </li>
+                </ul>
+            </aside>
         </div>
     </div>
 

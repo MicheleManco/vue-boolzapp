@@ -37,18 +37,18 @@
     background-color: hotpink;
 }
 
-#aside {
+aside {
     float:left;
     height: 100%;
     width: 35%;
     /* debug */
-    background-color: rgb(202, 21, 202);
+    background-color: white
 }
 
 #main header {
-    height: 10%;
+    height: 12%;
     width: 100%;
-    background-color: rgb(182, 182, 182);
+    background-color: rgb(209, 209, 209);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,39 +64,125 @@ display: flex;
 }
 
 #main #chat {
-height: 80%;
+height: 76%;
 width: 100%;
 background-color: greenyellow;
 }
 
 #main #inputs-mex {
-height: 10%;
+height: 12%;
 width: 100%;
-background-color: rgb(182, 182, 182);
+background-color: rgb(209, 209, 209);
 display: flex;
 justify-content: space-around;
 align-items: center;
 }
 
-.container-mex-send {
-    display: flex;
-    justify-content: flex-end;
+.container-mex {
+height: 40px;
 }
 
-.mex-send {
+.sent {
     width: 35%;
     margin:10px 30px;
     padding: 5px;
     border-radius: 10px;
+    float: right;
     /* debug */
     background-color: rgb(47, 255, 127);
 }
 
-.mex-arrived {
+.received {
     width: 35%;
     margin:10px 30px;
     padding: 5px;
     border-radius: 10px;
+    float: left;
     /* debug */
     background-color: rgb(255, 255, 255);
 }
+
+#header-aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12%;
+    padding: 0 20px;
+    /* debug */
+    background-color: rgb(209, 209, 209);
+}
+
+#profilo-utente {
+    display: flex;
+    align-items: center;
+}
+#profilo-utente img {
+    height: 80px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+li {
+    list-style: none;
+}
+
+li img {
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.contatti {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 10px 2px;
+}
+
+.spaziatura-contatti {
+    display: flex;
+}
+
+#oggetto-persona-attiva img{
+    height: 80px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+i {
+    font-size: 25px;
+    color: #646464; 
+    margin: 10px;
+}
+
+#search {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    background-color: #eaeaea8a;
+}
+
+#back-color {
+    height: 70%;
+    width: 95%;
+    margin: 0 auto;
+    background-color: white;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+#search i {
+    font-size: 16px;
+    color: #b1b1b1;
+    margin-right: 15px;
+}
+
+#search input {
+    border: none;
+    max-width: 220px;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+}
+
