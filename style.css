@@ -48,7 +48,7 @@ aside {
 #main header {
     height: 12%;
     width: 100%;
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(225, 225, 225);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,6 +56,9 @@ aside {
 
 #oggetto-persona-attiva {
 display: flex;
+margin-left: 10px;
+margin-top: 5px;
+margin-bottom: 5px;
 }
 
 #icone-top-dx {
@@ -72,7 +75,7 @@ background-color: greenyellow;
 #main #inputs-mex {
 height: 12%;
 width: 100%;
-background-color: rgb(209, 209, 209);
+background-color: rgb(225, 225, 225);
 display: flex;
 justify-content: space-around;
 align-items: center;
@@ -108,8 +111,9 @@ height: 40px;
     align-items: center;
     height: 12%;
     padding: 0 20px;
+    border-right: 2px solid rgb(173, 173, 173);
     /* debug */
-    background-color: rgb(209, 209, 209);
+    background-color: rgb(225, 225, 225);
 }
 
 #profilo-utente {
@@ -137,6 +141,7 @@ li img {
     justify-content: space-between;
     margin: 5px 0;
     padding: 10px 2px;
+    border-bottom: 2px solid rgb(173, 173, 173);
 }
 
 .spaziatura-contatti {
@@ -151,7 +156,7 @@ li img {
 
 i {
     font-size: 25px;
-    color: #646464; 
+    color: #8d8d8d; 
     margin: 10px;
 }
 
@@ -159,7 +164,7 @@ i {
     height: 55px;
     display: flex;
     align-items: center;
-    background-color: #eaeaea8a;
+    background-color: #dfdfdf8a;
 }
 
 #back-color {
