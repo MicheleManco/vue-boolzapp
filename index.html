@@ -33,9 +33,6 @@
                         <div v-for="message,i in contacts[0].messages" :keys="i" class="container-mex clearfix">
                             <div :class="message.status">{{message.text}}</div>
                         </div>
-                    <!-- vif che se si verifica true allora stampo un vfor di tutto messages 
-                    e modifico la classe sent o received in base a quello che c'è scritto nello status -->
-                    <!-- oppure devo fare un v-for con dentro un v-for di tutto e stamparmi solo quelli con visible true -->
 
                     <!-- messaggi di debug -->
                     <!-- <div class="container-mex"><div class="sent"> ciao come stai</div></div>
