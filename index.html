@@ -18,7 +18,7 @@
                     <div id="oggetto-persona-attiva">
                         <img src="img/avatar_1.jpg" alt="">
                         <div>
-                            <div>nome</div>
+                            <div class="font-name">MIk</div>
                             <div>ultimo accesso</div>
                         </div>
                     </div>
@@ -27,15 +27,21 @@
                         <div><i class="fas fa-paperclip"></i></div>
                         <div><i class="fas fa-ellipsis-v"></i></div>
                     </div>
-
-
                 </header>
-                <div id="chat">
+                <!-- v-if="contacts.visible ? " -->
+                <div id="chat" >
+                        <div v-for="message,i in contacts[0].messages" :keys="i" class="container-mex clearfix">
+                            <div :class="message.status">{{message.text}}</div>
+                        </div>
+                    <!-- vif che se si verifica true allora stampo un vfor di tutto messages 
+                    e modifico la classe sent o received in base a quello che c'è scritto nello status -->
+                    <!-- oppure devo fare un v-for con dentro un v-for di tutto e stamparmi solo quelli con visible true -->
+
                     <!-- messaggi di debug -->
-                    <div class="container-mex"><div class="sent"> ciao come stai</div></div>
+                    <!-- <div class="container-mex"><div class="sent"> ciao come stai</div></div>
                     <div class="container-mex"><div class="received"> ciao come stai</div></div>
                     <div class="container-mex"><div class="sent"> ciao come stai</div></div>
-                    <div class="container-mex"><div class="received"> ciao come stai</div></div>
+                    <div class="container-mex"><div class="received"> ciao come stai</div></div> -->
                 </div>
                 
                 <div id="inputs-mex">
@@ -44,37 +50,40 @@
                     <div><i class="fas fa-microphone-alt"></i></div>
                 </div>
             </main>
+
+            <!-- parte sinistra -->
             <aside>
                 <div id="header-aside">
                     <div id="profilo-utente">
                         <img src="img/avatar_io.jpg" alt="">
-                        <div>Mio nome</div>
+                        <div class="font-name">Mio nome</div>
                     </div>  
                     <div id="icone-top-dx">
-                        <div>icona1</div>
-                        <div>icona2</div>
-                        <div>icona3</div>
+                        <div><i class="fas fa-circle-notch"></i></div>
+                        <div><i class="fas fa-comment-alt"></i></div>
+                        <div><i class="fas fa-ellipsis-v"></i></div>
                     </div>
                 </div>
 
                 <section id="search">
                     <div id="back-color">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca/inizia una nuova chat">
                     </div> 
                 </section>
 
                 <ul>
-                    <li v-for="contact in contacts">
+                    
+                    <li v-for="contact,i in contacts" :key="i" @click="showChat(i)">
                         <div class="contatti">
                             <div class="spaziatura-contatti">
                                 <div><img :src="contact.avatar" alt=""></div> 
                                 <div>
-                                    <div>{{contact.name}}</div>
-                                    <div>lultimo messaggio</div>
+                                    <div class="font-name">{{contact.name}}</div>
+                                    <div class="text-gray">lultimo messaggio</div>
                                 </div>  
                             </div>
-                            <div>l'ultimo accesso</div>                                             
+                            <div class="text-gray">l'ultimo accesso</div>                                             
                         </div>
                     </li>
                 </ul>

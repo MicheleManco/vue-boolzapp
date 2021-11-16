@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 #green-bg {
     background-color: green;
     height: 15vh;
@@ -69,7 +75,7 @@ margin-bottom: 5px;
 #main #chat {
 height: 76%;
 width: 100%;
-background-color: greenyellow;
+background-image: url(img/sfondo.jpg);
 }
 
 #main #inputs-mex {
@@ -90,6 +96,7 @@ height: 40px;
     margin:10px 30px;
     padding: 5px;
     border-radius: 10px;
+    border: 1px solid gray;
     float: right;
     /* debug */
     background-color: rgb(47, 255, 127);
@@ -100,6 +107,7 @@ height: 40px;
     margin:10px 30px;
     padding: 5px;
     border-radius: 10px;
+    border: 1px solid gray;
     float: left;
     /* debug */
     background-color: rgb(255, 255, 255);
@@ -123,7 +131,7 @@ height: 40px;
 #profilo-utente img {
     height: 80px;
     border-radius: 50%;
-    padding: 5px;
+    padding: 10px;
 }
 
 li {
@@ -148,10 +156,15 @@ li img {
     display: flex;
 }
 
+#oggetto-persona-attiva {
+    display: flex;
+    align-items: center;
+}
+
 #oggetto-persona-attiva img{
     height: 80px;
     border-radius: 50%;
-    padding: 5px;
+    padding: 10px;
 }
 
 i {
@@ -189,5 +202,20 @@ i {
     width: 100%;
     height: 30px;
     padding: 5px;
+}
+
+#inputs-mex input {
+    border: none;
+    width: 75%;
+    height: 30px;
+    padding: 5px;
+}
+
+.text-gray {
+    color: rgb(134, 134, 134);
+}
+
+.font-name{
+    font-size: 20px;
 }
 
