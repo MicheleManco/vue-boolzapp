@@ -13,40 +13,7 @@
         <div id="green-bg"></div>
         <div id="light-green-bg"></div>
         <div id="container">
-            <main id="main">
-                <header>
-                    <div id="oggetto-persona-attiva">
-                        <img src="img/avatar_1.jpg" alt="">
-                        <div>
-                            <div class="font-name">MIk</div>
-                            <div>ultimo accesso</div>
-                        </div>
-                    </div>
-                    <div id="icone-top-dx">
-                        <div><i class="fas fa-search"></i></div>
-                        <div><i class="fas fa-paperclip"></i></div>
-                        <div><i class="fas fa-ellipsis-v"></i></div>
-                    </div>
-                </header>
-                <!-- v-if="contacts.visible ? " -->
-                <div id="chat" >
-                        <div v-for="message,i in contacts[this.counterVisible].messages" :keys="i" class="container-mex clearfix">
-                            <div :class="message.status">{{message.text}}</div>
-                        </div>
-
-                    <!-- messaggi di debug -->
-                    <!-- <div class="container-mex"><div class="sent"> ciao come stai</div></div>
-                    <div class="container-mex"><div class="received"> ciao come stai</div></div>
-                    <div class="container-mex"><div class="sent"> ciao come stai</div></div>
-                    <div class="container-mex"><div class="received"> ciao come stai</div></div> -->
-                </div>
-                
-                <div id="inputs-mex">
-                    <div><i class="far fa-smile"></i></div>
-                            <input type="text" placeholder="scrivi messaggio">
-                    <div><i class="fas fa-microphone-alt"></i></div>
-                </div>
-            </main>
+            
 
             <!-- parte sinistra -->
             <aside>
@@ -85,8 +52,47 @@
                     </li>
                 </ul>
             </aside>
+
+            <main id="main">
+                <header>
+                    <div id="oggetto-persona-attiva">
+                        <img :src="contacts[counterVisible].avatar" alt="">
+                        <div>
+                            <div class="font-name">{{contacts[counterVisible].name}}</div>
+                            <div>ultimo accesso</div>
+                        </div>
+                    </div> 
+                    <div id="icone-top-dx">
+                        <div><i class="fas fa-search"></i></div>
+                        <div><i class="fas fa-paperclip"></i></div>
+                        <div><i class="fas fa-ellipsis-v"></i></div>
+                    </div>
+                </header>
+                <!-- v-if="contacts.visible ? "  -->
+                <div id="chat" >
+                        <div v-for="message,i in contacts[this.counterVisible].messages" :keys="i" class="container-mex clearfix">
+                            <div :class="message.status">{{message.text}}</div>
+                        </div>
+        
+                    <!-- messaggi di debug  -->
+                    <!-- <div class="container-mex"><div class="sent"> ciao come stai</div></div>
+                    <div class="container-mex"><div class="received"> ciao come stai</div></div>
+                    <div class="container-mex"><div class="sent"> ciao come stai</div></div>
+                    <div class="container-mex"><div class="received"> ciao come stai</div></div>  -->
+                </div>
+                
+                <div id="inputs-mex">
+                    <div><i class="far fa-smile"></i></div>
+                            <input type="text" placeholder="scrivi messaggio">
+                    <div><i class="fas fa-microphone-alt"></i></div>
+                </div>
+            </main>
         </div>
+
+       
     </div>
+
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
