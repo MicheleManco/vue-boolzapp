@@ -2,6 +2,7 @@
 var myapp = new Vue({
     el: "#myapp",
 data:{
+    counterVisible: 0,
     contacts: [
         {
             name: ' Michele',
@@ -32,18 +33,18 @@ data:{
             messages: [
                 {
                 date: ' 10/01/2020 1 5:30:55',
-                text: ' Hai p ortato a s passo i l c ane?',
+                text: 'ei come stai',
                 status: 'sent'
                 },
                 {
                 date: ' 10/01/2020 1 5:50:00',
-                text: ' Ricordati d i d argli d a m angiare',
-                status: 'sent'
+                text: ' bene grazie e tu?',
+                status: 'received'
                 },
                 {
                 date: ' 10/01/2020 1 6:15:22',
-                text: ' Tutto f atto!',
-                status: 'received'
+                text: 'benissimo',
+                status: 'sent'
                 }
             ],
         },
@@ -54,18 +55,18 @@ data:{
             messages: [
                 {
                 date: ' 10/01/2020 1 5:30:55',
-                text: ' Hai p ortato a s passo i l c ane?',
+                text: 'sei andato a fare la spesa?',
                 status: 'sent'
                 },
                 {
                 date: ' 10/01/2020 1 5:50:00',
-                text: ' Ricordati d i d argli d a m angiare',
-                status: 'sent'
+                text: 'no tra un pò vado',
+                status: 'received'
                 },
                 {
                 date: ' 10/01/2020 1 6:15:22',
-                text: ' Tutto f atto!',
-                status: 'received'
+                text: 'ok basta che non ti dimentichi',
+                status: 'sent'
                 }
             ],
         },
@@ -76,17 +77,17 @@ data:{
             messages: [
                 {
                 date: ' 10/01/2020 1 5:30:55',
-                text: ' Hai p ortato a s passo i l c ane?',
-                status: 'sent'
+                text: 'posso chiamarti?',
+                status: 'received'
                 },
                 {
                 date: ' 10/01/2020 1 5:50:00',
-                text: ' Ricordati d i d argli d a m angiare',
+                text: 'no ti chiamo io quando ho finito',
                 status: 'sent'
                 },
                 {
                 date: ' 10/01/2020 1 6:15:22',
-                text: ' Tutto f atto!',
+                text: 'va bene aspetterò',
                 status: 'received'
                 }
             ],
@@ -95,7 +96,8 @@ data:{
 },
 methods:{
     showChat:function (index) {
-        this.contacts[index].visible = true;
+        this.counterVisible = index;
+        console.log(this.counterVisible);
     }
 }
 })
