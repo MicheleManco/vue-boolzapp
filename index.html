@@ -68,22 +68,16 @@
                         <div><i class="fas fa-ellipsis-v"></i></div>
                     </div>
                 </header>
-                <!-- v-if="contacts.visible ? "  -->
+
                 <div id="chat" >
                         <div v-for="message,i in contacts[this.counterVisible].messages" :keys="i" class="container-mex clearfix">
                             <div :class="message.status">{{message.text}}</div>
                         </div>
-        
-                    <!-- messaggi di debug  -->
-                    <!-- <div class="container-mex"><div class="sent"> ciao come stai</div></div>
-                    <div class="container-mex"><div class="received"> ciao come stai</div></div>
-                    <div class="container-mex"><div class="sent"> ciao come stai</div></div>
-                    <div class="container-mex"><div class="received"> ciao come stai</div></div>  -->
                 </div>
                 
                 <div id="inputs-mex">
                     <div><i class="far fa-smile"></i></div>
-                            <input type="text" placeholder="scrivi messaggio">
+                            <input type="text" placeholder="scrivi messaggio" v-model="usermex" v-on:keyup.enter="sendmex">
                     <div><i class="fas fa-microphone-alt"></i></div>
                 </div>
             </main>

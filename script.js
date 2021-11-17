@@ -3,6 +3,7 @@ var myapp = new Vue({
     el: "#myapp",
 data:{
     counterVisible: 0,
+    usermex: "",
     contacts: [
         {
             name: ' Michele',
@@ -97,8 +98,40 @@ data:{
 methods:{
     showChat:function (index) {
         this.counterVisible = index;
-        console.log(this.counterVisible);
+    },
+    sendmex:function () {
+        newmex = {
+            date: '10/01/2020 1 6:15:22',
+            text: this.usermex,
+            status: 'sent'
+        }
+        if (this.usermex !== ""){
+            this.contacts[this.counterVisible].messages.push(newmex);
+        }
+        this.usermex = ""; 
+        setTimeout(() =>{ 
+            newmex = {
+                date: '10/01/2020 1 6:15:22',
+                text: "ok",
+                status: 'received'
+            }
+                this.contacts[this.counterVisible].messages.push(newmex);
+        }, 1000)
     }
+    // addTask: function() {
+    //     newTask = {
+    //         text: this.textTasks,
+    //         done: false
+    //     }
+    //     if (this.textTasks !== "") {
+    //         this.tasks.push(newTask);
+    //     }
+    //     this.textTasks = "";
+    // }
 }
 })
 
+// ● Aggiunta di un messaggio: l ’utente scrive un t esto nella parte bassa e digitando
+// “enter” i l t esto viene aggiunto al t hread sopra, come messaggio verde
+// ● Risposta dall’interlocutore: a d ogni i nserimento di un messaggio, l ’utente riceverà
+// un “ok” come risposta, che apparirà dopo 1 secondo.

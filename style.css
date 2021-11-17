@@ -76,6 +76,7 @@ margin-bottom: 5px;
 height: 76%;
 width: 100%;
 background-image: url(img/sfondo.jpg);
+overflow: auto;
 }
 
 #main #inputs-mex {
