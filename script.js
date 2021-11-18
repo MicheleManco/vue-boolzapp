@@ -2,6 +2,7 @@
 var myapp = new Vue({
     el: "#myapp",
 data:{
+    ricerca: "",
     counterVisible: 0,
     usermex: "",
     contacts: [
@@ -118,20 +119,6 @@ methods:{
                 this.contacts[this.counterVisible].messages.push(newmex);
         }, 1000)
     }
-    // addTask: function() {
-    //     newTask = {
-    //         text: this.textTasks,
-    //         done: false
-    //     }
-    //     if (this.textTasks !== "") {
-    //         this.tasks.push(newTask);
-    //     }
-    //     this.textTasks = "";
-    // }
 }
 })
 
-// ● Aggiunta di un messaggio: l ’utente scrive un t esto nella parte bassa e digitando
-// “enter” i l t esto viene aggiunto al t hread sopra, come messaggio verde
-// ● Risposta dall’interlocutore: a d ogni i nserimento di un messaggio, l ’utente riceverà
-// un “ok” come risposta, che apparirà dopo 1 secondo.

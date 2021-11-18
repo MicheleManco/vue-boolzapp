@@ -28,17 +28,26 @@
                         <div><i class="fas fa-ellipsis-v"></i></div>
                     </div>
                 </div>
+                <div id="banner">
+                    <div id="cerchio">
+                        <i class="far fa-bell-slash"></i>
+                    </div>
+                    <div>
+                        <div>Ricevi notifiche di nuovi messaggi</div>
+                        <div><a href="">Attiva notifiche desktop</a></div>
+                    </div>
 
+                </div>
+                <!-- barra di ricerca  -->
                 <section id="search">
                     <div id="back-color">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Cerca/inizia una nuova chat">
+                        <input type="text" placeholder="Cerca/inizia una nuova chat" v-model="ricerca">
                     </div> 
                 </section>
-
-                <ul>
-                    
-                    <li v-for="contact,i in contacts" :keys="i" :class="i === counterVisible ? 'active' : ''" @click="showChat(i)">
+                <!-- lista contatti  -->
+                <ul> 
+                    <li v-if="contact.name.toLowerCase().includes(ricerca.toLowerCase())" v-for="contact,i in contacts" :key="i" :class="i === counterVisible ? 'active' : ''" @click="showChat(i)">
                         <div class="contatti">
                             <div class="spaziatura-contatti">
                                 <div><img :src="contact.avatar" alt=""></div> 
